@@ -20,7 +20,7 @@ movies = pd.DataFrame(movies_dict)
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 st.title('Movie Recommendation System')
-selected_movie_name = st.selectbox('abc', movies['Series_Title'].values)
+selected_movie_name = st.selectbox('Choose your favourite movie.', movies['Series_Title'].values)
 
 if st.button('Recommend'):
     recommendations = recommend(selected_movie_name)
